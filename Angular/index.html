@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+      <meta charset="utf-8"/>  
+      <title>Maquetación para el master en Frameworks Javascript</title>  
+
+      <!--Hoja de estilos-->
+      <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+
+    </head>
+    <body>
+        <header id="header">
+            <div class="center">
+        
+            <!--logo-->
+                <div id="logo">
+                    <img src="assets/images/angular.png" class="app-logo" alt="Logotipo"/>
+                    <span>
+                        <strong>Curso</strong>Angular
+                    </span>
+                </div>
+            
+            <!--menu-->  
+                <nav id="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                            <a href="#">Pagina 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Pagina 2</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--LIMPIAR FLOATS-->
+                <div class="clearfix"> </div>
+            </div>
+           
+        </header>
+
+        <div id="slider" class="slider-big">
+            <h1> Bienvenidos al curso de Angular con Alex Carrera</h1>
+            <a href="blog.html" class="btn-white">Ir al blog</a>
+        </div>
+
+        <div class="center">
+            <section id="content">
+                <h2 class="subheader">Ultimos articulos</h2>
+          
+                <script type="text/javascript">
+                    window.addEventListener("load", function(){
+                        var template = document.getElementById("article-template");
+                        var articles = document.getElementById('articles');
+            
+                        for(var i = 1; i <=5; i++){
+                            var clonar = template.cloneNode(true);
+                            clonar.removeAttribute("id");
+                            var h2 = clonar.getElementsByTagName("h2")[0];
+                            h2.innerHTML = h2.textContent + ' ' + i;
+            
+                            articles.appendChild(clonar);
+                        }
+                    });
+                 </script>
+            
+            <!--Listado de articulos-->
+
+                <div id="articles">
+
+                    <article class="article-item" id="article-template">
+                        <div class="image-wrap">
+                            <img src="assets/images/paisaje.jpg" alt="Paisaje"/>
+                        </div>
+                        <h2>Articulo de Prueba</h2>
+                        <span class="date"> Hace 5 minutos</span>
+                        <a href="#">Leer mas</a>
+                        <div class="clearfix"></div>
+                    </article>
+
+                    <!--anadir articulos via js-->
+
+
+        
+                </div>
+            
+            </section>
+
+            <aside id="sidebar">
+                <div id="nav-blog" class="sidebar-item">
+                    <h3>Puedes hacer esto</h3>
+                    <a href="#" class="btn btn-succes"> Crear articulo</a>
+                </div>
+                <div id="search" class="sidebar-item">
+                    <h3>Buscador</h3>
+                    <p>Encuentra el articulo que buscas</p>
+                    <form>
+                        <input type="text" name="search"/>
+                        <input type="submit" class="btn" name="submit" value="Buscar"/>
+                    </form>
+                </div>
+
+            </aside>
+            <div class="clearfix"></div>
+        </div>
+
+        <footer id="footer">
+            <div class="center">
+                <p>
+                    &copy; Master en frameworks by LaLeS
+                </p>
+            </div>
+        </footer>
+
+
+    </body>
+
+</html>

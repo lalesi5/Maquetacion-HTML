@@ -240,7 +240,7 @@ textarea{
 .radio-button{
     margin-top: 15px;
     margin-bottom: 10px;
-    float: left;
+    float: center;
 }
 
 #footer{
@@ -307,7 +307,7 @@ textarea{
     font-size: 38px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .article-item-detail{
@@ -329,4 +329,89 @@ textarea{
     margin-top: 15px;
     margin-bottom: 0px;
     border: none;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 1823px){
+    /*Se aplicaran estos estilos*/
+    #logo{
+        float: none;
+        width: 240px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    #menu, #menu ul{
+        clear: both;
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        line-height: 43px;
+    }
+
+    #content{
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar{
+        float: none;
+        width: 100%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+    .mid-form{
+        width: 70%;
+    }
+
+    .btn{
+        float: none;
+        margin: 0px auto;
+    }
+    
+}
+
+/*Desde la anchura 0px hasta la anchura 1488px de pantalla*/
+@media (max-width: 633px){
+    /*Se aplicaran estos estilos*/
+    #header{
+        min-height: 130px;
+        overflow: hidden;
+    }
+
+    #menu, #menu ul{
+        list-height:50px
+    }
+
+    #menu ul li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider.slider-small{
+        height: 100px;
+    }
+    
+    #slider.slider-small h1{
+        padding-top: 35px;
+    }
+
+}
+
 }
