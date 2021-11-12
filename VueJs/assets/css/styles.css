@@ -16,7 +16,7 @@ body{
     width: 100%;
     background-color: white;
     border-bottom: 1px solid #ccc;
-    border-top: 5px solid #61dafb;
+    border-top: 5px solid #09a330;
 }
 
 .center {
@@ -30,7 +30,7 @@ body{
 }
 
 #logo {
-    width: 15%;
+    width: 20%;
     font-size: 30px;
     float: left;
     margin-top: 35px;
@@ -40,16 +40,26 @@ body{
     display: block;
     float: left;
     height: 60px;
-    margin-top: -10px;
-    animation: girar infinite 10s linear;
+    margin-top: -9px;
+    margin-right: 10px;
+    animation: latir infinite 5s linear;
 }
 
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
+@keyframes latir {
+    0% {
+        transform: scale(1,1);
     }  
-    to {
-       transform: rotate(360deg);
+
+    50%{
+        transform: scale(1.02,1.02);
+    }
+
+    55%{
+        transform: scale(0.95,0.95);
+    }
+
+    100% {
+       transform: scale(1,1);
     }  
 }
 
@@ -88,7 +98,7 @@ body{
 }
 
 #menu a:hover{
-    color: #3cb2d3;
+    color: #0f9b0f;
 }
 
 #slider {
@@ -100,8 +110,11 @@ body{
     
     /*degradado color*/
     
-    background: rgb(26,115,181);
-    background: radial-gradient(circle, rgba(26,115,181,1) 0%, rgba(31,138,198,0.8323530095632002) 54%, rgba(0,212,255,1) 100%);
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
 }
 
 #slider h1 {
@@ -337,7 +350,7 @@ textarea{
     /*Se aplicaran estos estilos*/
     #logo{
         float: none;
-        width: 240px;
+        width: 300px;
         margin: 0px auto;
         margin-top: 20px;
     }
@@ -365,7 +378,6 @@ textarea{
 
     #slider h1{
         padding-top: 115px;
-        font-size: 25px;
     }
     .mid-form{
         width: 70%;
@@ -396,8 +408,7 @@ textarea{
     }
 
     #slider h1{
-        font-size: 19px;
-        padding-top: 30px;
+        padding-top: 80px;
     }
 
     #slider .btn-white{
